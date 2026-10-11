@@ -1,4 +1,7 @@
 # Práctica 02 - Portafolio Web Interactivo
+Alumna: Jimena garcia Ramirez
+Docente: Marco A. Ramirez Hernandez
+Asignatura: Aplicaciones Web
 
 ## 🎯 Objetivo del Proyecto
 Desarrollar una aplicación web interactiva y responsiva integrando la maquetación semántica con HTML5, estilos avanzados con CSS3 y manipulación dinámica del DOM con JavaScript para la incorporación de componentes como carruseles multimedia y ventanas modales de pantalla completa.
@@ -71,3 +74,5 @@ Practicas_Aplicaciones_Web_250007/
 
 ## 💡 Conclusiones sobre los Conocimientos Adquiridos
 Mediante esta práctica se logró dominar la interacción cliente-servidor mediante JavaScript nativo, consolidando el uso de `addEventListener` para responder a eventos del usuario sin necesidad de bibliotecas externas. Asimismo, se comprendió la importancia de utilizar unidades de medida flexibles (`clamp()`) y controladores de flujo en Git para mantener un repositorio ordenado mediante ramas de trabajo y desarrollo limpio.
+
+
