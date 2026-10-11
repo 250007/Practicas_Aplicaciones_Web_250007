@@ -272,7 +272,7 @@ section:nth-of-type(5) .contenido-seccion {
 .datos article {
     padding: 25px;
     text-align: center;
-    background: white;
+    background: #ea97b3;
     color: #111827;
     border-radius: 18px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
@@ -302,7 +302,7 @@ section:nth-of-type(5) .contenido-seccion {
     flex: 1 1 30%; 
     min-width: 0; 
     
-    background: white;
+    background: #ea97b3;
     padding: 15px;
     border-radius: 20px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
@@ -357,7 +357,7 @@ section:nth-of-type(5) .contenido-seccion {
 .favorito-pdf {
     width: 100%;
     height: 180px;          
-    border: 1px solid #eee;  
+    border: 1px solid #ea97b3;  
     border-radius: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
@@ -452,7 +452,7 @@ footer {
     padding: 40px;
     text-align: center;
     background: #0f172a;
-    color: white;
+    color: rgb(245, 245, 245);
 }
 
 footer p {
@@ -562,7 +562,7 @@ footer a {
 
     margin-top: 15px;
 
-    background: #f1f5f9;
+    background: #fdfcfd;
 
     padding: 10px;
 
@@ -683,28 +683,7 @@ body.no-scroll {
 
 
 
-/* ================= ADAPTACIÓN RESPONSIVA (MÓVILES) ================= */
-
-@media (max-width: 768px) {
-    .grid, 
-    .info-grid {
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .card {
-        width: 100% !important;
-        max-width: 320px !important;
-    }
-
-    
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    /* ================= CARRUSEL DE FAVORITOS ================= */
+/* ================= CARRUSEL DE FAVORITOS (ESTILOS GENERALES) ================= */
 
 .carousel-container {
     position: relative;
@@ -731,15 +710,9 @@ body.no-scroll {
     box-sizing: border-box;
 }
 
-@media (min-width: 769px) {
-    .carousel-card {
-        min-width: calc(33.333% - 14px); 
-    }
-}
-
 .carousel-btn {
     background: rgba(17, 24, 39, 0.7);
-    color: white;
+    color: rgb(161, 60, 97);
     border: none;
     font-size: 1.8rem;
     padding: 10px 15px;
@@ -770,6 +743,34 @@ body.no-scroll {
 }
 
 .dot.active {
-    background-color: #ffffff;
+    background-color: #fcfafa;
 }
+
+/* ================= MEDIA QUERIES (ADAPTACIÓN SEGÚN PANTALLA) ================= */
+
+/* Pantallas de escritorio */
+@media (min-width: 769px) {
+    .carousel-card {
+        min-width: calc(33.333% - 14px); 
+    }
+}
+
+/* Pantallas celulares */
+@media (max-width: 768px) {
+    .grid, 
+    .info-grid {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 320px !important;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
 }

@@ -236,16 +236,14 @@
     </section>
 
 
-    <!-- SECCIÓN FAVORITOS (CARRUSEL) -->
+    <!-- SECCIÓN FAVORITOS -->
 <section id="favoritos">
     <h2>Mis Favoritos</h2>
 
-    <div class="carousel-container">
-        <!-- Botón Anterior -->
-        <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Anterior">&#10094;</button>
+    <div class="carousel-wrapper">
+        <button class="carousel-arrow prev-arrow" id="prevBtn" aria-label="Anterior">&#10094;</button>
 
-        <!-- Contenedor de Tarjetas -->
-        <div class="carousel-track-container">
+        <div class="carousel-container">
             <div class="carousel-track" id="carouselTrack">
                 
                 <!-- Tarjeta 1: Película -->
@@ -254,8 +252,8 @@
                     <img src="assets/Images/pelicula.jpg" alt="Rapunzel" class="favorito-img">
                     <p>Rapunzel</p>
                     <button class="btn-modal" data-type="video" data-src="assets/videos/pelicula.mp4">
-                        🎬 Ver Video
-                    </button>
+    🎬 Ver Película
+</button>
                 </article>
 
                 <!-- Tarjeta 2: Canción -->
@@ -263,9 +261,9 @@
                     <h3>Canción Favorita</h3>
                     <img src="assets/Images/cancion.jpg" alt="Fast Times" class="favorito-img">
                     <p>Fast Times - Sabrina Carpenter</p>
-                    <button class="btn-modal" data-type="audio" data-src="assets/audio/cancion.mp3">
-                        🎵 Escuchar Audio
-                    </button>
+                    <button class="btn-modal" data-type="audio" data-src="assets/audios/cancion.mp3">
+    🎵 Escuchar Canción
+</button>
                 </article>
 
                 <!-- Tarjeta 3: Libro -->
@@ -274,19 +272,18 @@
                     <img src="assets/Images/libro.jpg" alt="Alicia en el país de las maravillas" class="favorito-img">
                     <p>Alicia en el país de las maravillas</p>
                     <button class="btn-modal" data-type="pdf" data-src="assets/docs/libro.pdf">
-                        📖 Ver Libro (PDF)
-                    </button>
+    📖 Leer Libro
+</button>
                 </article>
 
             </div>
         </div>
 
-        <!-- Botón Siguiente -->
-        <button class="carousel-btn next-btn" id="nextBtn" aria-label="Siguiente">&#10095;</button>
+        <button class="carousel-arrow next-arrow" id="nextBtn" aria-label="Siguiente">&#10095;</button>
     </div>
 
-    <!-- Indicadores (Puntos) -->
-    <div class="carousel-indicators" id="carouselIndicators">
+    <!-- Indicadores de navegación -->
+    <div class="carousel-dots" id="carouselDots">
         <span class="dot active" data-index="0"></span>
         <span class="dot" data-index="1"></span>
         <span class="dot" data-index="2"></span>
