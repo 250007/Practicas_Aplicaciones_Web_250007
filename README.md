@@ -1,9 +1,9 @@
 # Práctica 02 - Portafolio de Aplicaciones Web
+** Desarrollo de Software Multiplataforma**
+
 * **Estudiante:** Jimena Garcia Ramirez
 
-
-* **Docente:** MTI Marco Antonio Ramírez Hernández
-
+* **Docente:** MTI Marco Antonio Ramirez Hernandez
 
 * **Periodo:** Septiembre - Diciembre
 
@@ -84,7 +84,7 @@ Practicas_Aplicaciones_Web_250007/
    ```bash
    git clone [https://github.com/250007/Practicas_Aplicaciones_Web_250007.git](https://github.com/250007/Practicas_Aplicaciones_Web_250007.git)
    ```
-2. Abrir el archivo `MiPerfil.html` en cualquier navegador moderno o utilizando la extensión *Live Server* en Visual Studio Code.
+2. Abrir el archivo `index.html` en cualquier navegador moderno o utilizando la extensión *Live Server* en Visual Studio Code.
 
 ---
 
