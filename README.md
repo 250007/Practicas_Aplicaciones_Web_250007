@@ -1,7 +1,23 @@
-# Práctica 02 - Portafolio Web Interactivo
-Alumna: Jimena garcia Ramirez
-Docente: Marco A. Ramirez Hernandez
-Asignatura: Aplicaciones Web
+# Práctica 02 - Portafolio de Aplicaciones Web
+* **Estudiante:** Jimena Garcia Ramirez
+
+
+* **Docente:** MTI Marco Antonio Ramírez Hernández
+
+
+* **Periodo:** Septiembre - Diciembre
+
+
+
+## Tabla de Prácticas de la Materia
+
+
+
+| No. | Nombre de la Práctica | Descripción | Potenciador | Estado |
+| --- | --- | --- | --- | --- |
+| 1 | Metodología de la Evaluación | Transcribir en libreta y comprender la metodología y fechas de la evaluación de la asignatura. | 5 | 🟢 Concluida |
+| 2 | Mi Primera Página Web | Codificar la primera página web estática estructurada con HTML5 puro, sin estilos ni funcionalidades avanzadas. | 10 | 🟢 Concluida |
+| 3 | Práctica 03: Mi Portafolio Web | Desarrollo e implementación de un portafolio web personal e interactivo utilizando HTML5 semántico, maquetación moderna con CSS3 (Flexbox/Grid) y manipulación del DOM con JavaScript. | 10 | 🟢 Concluida |
 
 ## 🎯 Objetivo del Proyecto
 Desarrollar una aplicación web interactiva y responsiva integrando la maquetación semántica con HTML5, estilos avanzados con CSS3 y manipulación dinámica del DOM con JavaScript para la incorporación de componentes como carruseles multimedia y ventanas modales de pantalla completa.
