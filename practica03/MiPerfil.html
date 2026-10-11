@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- MODAL DE PANTALLA COMPLETA -->
+<div id="mediaModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
     <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js"
         crossorigin="anonymous"></script>
 
@@ -13,6 +21,14 @@
     <title>
         Jimena Garcia Ramirez @T.S.U en Desarrollo de Software Multiplataforma
     </title>
+
+
+
+    <!-- Importar tipografía Poppins desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 
     <link rel="icon"
         href="assets/Images/gatito.svg"
@@ -103,12 +119,12 @@
 
                 <p>
                     Soy estudiante de Tecnología de la Informacion y me interesa
-                    aprender sobre desarrollo web, programación, diseña u nuevas
+                    aprender sobre desarrollo web, programación, diseño y nuevas
                     tecnologías.
                 </p>
 
                 <p>
-                    Me gustra resolver problemas, crear cosas nuevas y desarrollar
+                    Me gusta resolver problemas, crear cosas nuevas y desarrollar
                     proyectos que puedan ser útiles.
                 </p>
 
@@ -220,79 +236,63 @@
     </section>
 
 
-    <!-- ====================== -->
-    <!-- FAVORITOS -->
-    <!-- ====================== -->
+    <!-- SECCIÓN FAVORITOS (CARRUSEL) -->
+<section id="favoritos">
+    <h2>Mis Favoritos</h2>
 
-     <section id="favoritos">
+    <div class="carousel-container">
+        <!-- Botón Anterior -->
+        <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Anterior">&#10094;</button>
 
-    <div class="parallax parallax-5 titulo-parallax">
-        <h2>Mis favoritos</h2>
-    </div>
+        <!-- Contenedor de Tarjetas -->
+        <div class="carousel-track-container">
+            <div class="carousel-track" id="carouselTrack">
+                
+                <!-- Tarjeta 1: Película -->
+                <article class="card carousel-card">
+                    <h3>Película favorita</h3>
+                    <img src="assets/Images/pelicula.jpg" alt="Rapunzel" class="favorito-img">
+                    <p>Rapunzel</p>
+                    <button class="btn-modal" data-type="video" data-src="assets/videos/pelicula.mp4">
+                        🎬 Ver Video
+                    </button>
+                </article>
 
+                <!-- Tarjeta 2: Canción -->
+                <article class="card carousel-card">
+                    <h3>Canción Favorita</h3>
+                    <img src="assets/Images/cancion.jpg" alt="Fast Times" class="favorito-img">
+                    <p>Fast Times - Sabrina Carpenter</p>
+                    <button class="btn-modal" data-type="audio" data-src="assets/audio/cancion.mp3">
+                        🎵 Escuchar Audio
+                    </button>
+                </article>
 
-    <div class="contenido-seccion">
+                <!-- Tarjeta 3: Libro -->
+                <article class="card carousel-card">
+                    <h3>Libro favorito</h3>
+                    <img src="assets/Images/libro.jpg" alt="Alicia en el país de las maravillas" class="favorito-img">
+                    <p>Alicia en el país de las maravillas</p>
+                    <button class="btn-modal" data-type="pdf" data-src="assets/docs/libro.pdf">
+                        📖 Ver Libro (PDF)
+                    </button>
+                </article>
 
-        <div class="grid">
-
-
-            <!-- PELÍCULA -->
-            <article class="card">
-
-                <h3>Película favorita</h3>
-
-                <video class="favorito-video" controls>
-                    <source src="assets/videos/pelicula.mp4" type="video/mp4">
-                    Tu navegador no soporta la reproducción de video.
-                </video>
-
-
-                <p>
-                    Rapunzel
-                </p>
-
-            </article>
-
-           <!-- CANCION --> 
-           <article class="card">
-
-                <h3>Cancion Favorita</h3>
-
-                <audio class="favorito-audio" controls>
-                    <source src="assets/audios/cancion.mpeg" type="audio/mpeg">
-                </audio>
-                <p>
-                    Fast Times - Sabrina Carpenter
-                </p>
-            </article>
-
-
-
-            <!-- LIBRO -->
-            <article class="card">
-
-                <h3>Libro favorito</h3>
-
-
-                <img 
-                src="assets/Images/libro.jpg"
-                alt="Alicia en el Pais de las Maravillas"
-                class="favorito-img">
-
-
-                <p>
-                    Alicia en el Pais de las Maravillas - Lewis Carrol
-                </p>
-
-
-            </article>
-
-
+            </div>
         </div>
 
+        <!-- Botón Siguiente -->
+        <button class="carousel-btn next-btn" id="nextBtn" aria-label="Siguiente">&#10095;</button>
     </div>
 
+    <!-- Indicadores (Puntos) -->
+    <div class="carousel-indicators" id="carouselIndicators">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+    </div>
 </section>
+
 
 
     <!-- ====================== -->
@@ -313,7 +313,7 @@
 
             <div class="redes-container">
 
-                <a href="https://github.com/"
+                <a href="https://github.com/250007"
                     target="_blank"
                     class="red-social">
 
@@ -345,7 +345,7 @@
                 </a>
 
 
-                <a href="https://www.instagram.com/"
+                <a href="https://www.instagram.com/xmena_0?psln=MXd3M3V6YWUyd3RpeA=="
                     target="_blank"
                     class="red-social">
 
@@ -369,7 +369,7 @@
                 </a>
 
 
-                <a href="https://www.facebook.com/"
+                <a href="https://www.facebook.com/share/19P1yWEALb/"
                     target="_blank"
                     class="red-social">
 
@@ -383,7 +383,7 @@
                 </a>
 
 
-                <a href="https://www.tiktok.com/"
+                <a href="https://www.tiktok.com/@menaa_x0"
                     target="_blank"
                     class="red-social">
 
@@ -428,7 +428,7 @@
                 </a>
 
 
-                <a href="https://www.youtube.com/"
+                <a href="https://www.youtube.com/@xmenaa_0"
                     target="_blank"
                     class="red-social">
 
@@ -473,6 +473,8 @@
         </a>
 
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

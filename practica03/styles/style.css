@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     background: #111827;
     color: #e4c3d3;
     line-height: 1.5;
@@ -42,7 +42,7 @@ nav ul {
 nav a {
     color: rgb(249, 249, 250);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600; 
 }
 
 .menu-option {
@@ -54,6 +54,22 @@ nav a {
 .menu-option:hover {
     font-size: 30px;
 }
+
+/* ================= ENCABEZADOS Y TITULOS ================= */
+
+
+h1, .porfile-card h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 4vw, 2.5rem); 
+}
+
+h3 {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);  
+}
+
 
 /* ================= PARALLAX ================= */
 
@@ -185,38 +201,63 @@ section {
     width: 100%;
 }
 
-/* Recuadro donde aparece el contenido */
-
 .contenido-seccion {
-    padding: 80px 8%;
+    padding: 60px 20px; 
     background: #dcb7cb;
     color: #111827;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-section:nth-of-type(2) .contenido-seccion {
-    background: #dcb7cb;
-}
-
-section:nth-of-type(3) .contenido-seccion {
-    background: #dcb7cb;
-}
-
-section:nth-of-type(4) .contenido-seccion {
-    background: #dcb7cb;
-}
-
+section:nth-of-type(2) .contenido-seccion,
+section:nth-of-type(3) .contenido-seccion,
+section:nth-of-type(4) .contenido-seccion,
 section:nth-of-type(5) .contenido-seccion {
     background: #dcb7cb;
 }
 
 .contenedor {
-    max-width: 1100px;
+    max-width: 1300px; 
     margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+    
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .contenedor > p {
     max-width: 900px;
-    margin: 0 auto 20px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+}
+
+/* ================= TARJETAS PEQUEÑAS (ACERCA DE MÍ) ================= */
+
+
+.info-grid, 
+.fila-cards,
+.contenedor-tarjetas { 
+    display: flex;
+    justify-content: center; 
+    gap: 25px;               
+    width: 100%;
+    max-width: 900px;       
+    margin-top: 20px;
+}
+
+
+.info-card,
+.card-mini {
+    flex: 1;                
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    text-align: center;
 }
 
 /* ================= DATOS PERSONALES ================= */
@@ -241,25 +282,38 @@ section:nth-of-type(5) .contenido-seccion {
     margin-bottom: 10px;
 }
 
-/* ================= GRID ================= */
+/* ================= GRID USANDO FLEXBOX ================= */
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    max-width: 1100px;
-    margin: auto;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: stretch !important; 
+    gap: 15px;
+    width: 100%;
+    max-width: 100%; 
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* ================= TARJETAS ================= */
 
 .card {
-    padding: 30px;
+    flex: 1 1 30%; 
+    min-width: 0; 
+    
     background: white;
-    color: #222;
+    padding: 15px;
     border-radius: 20px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
     transition: .3s;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    height: auto; 
 }
 
 .card:hover {
@@ -268,7 +322,45 @@ section:nth-of-type(5) .contenido-seccion {
 }
 
 .card h3 {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.grid .card {
+    justify-content: space-between;
+}
+
+
+/* ================= MULTIMEDIA ================= */
+
+.favorito-img {
+    width: 100%;
+    height: 180px;        
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.favorito-video,
+.favorito-audio {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.favorito-video {
+    height: 160px;
+    object-fit: cover;
+}
+
+
+.favorito-pdf {
+    width: 100%;
+    height: 180px;          
+    border: 1px solid #eee;  
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 /* ================= REDES SOCIALES ================= */
@@ -528,20 +620,156 @@ footer a {
 
 }
 
+/* ================= VENTANA MODAL (PANTALLA COMPLETA) ================= */
+
+/* Deshabilitar scroll al abrir el modal */
+body.no-scroll {
+    overflow: hidden;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-modal {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #374151;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-modal:hover {
+    background: #4b5563;
+}
 
 
-/* Celulares */
 
-@media (max-width:600px){
 
-    .porfile-card{
+/* ================= ADAPTACIÓN RESPONSIVA (MÓVILES) ================= */
 
-        margin: 20px;
-
-        transform: none;
-
-        padding: 30px;
-
+@media (max-width: 768px) {
+    .grid, 
+    .info-grid {
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
+    .card {
+        width: 100% !important;
+        max-width: 320px !important;
+    }
+
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* ================= CARRUSEL DE FAVORITOS ================= */
+
+.carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    gap: 20px;
+}
+
+.carousel-card {
+    min-width: 100%; 
+    box-sizing: border-box;
+}
+
+@media (min-width: 769px) {
+    .carousel-card {
+        min-width: calc(33.333% - 14px); 
+    }
+}
+
+.carousel-btn {
+    background: rgba(17, 24, 39, 0.7);
+    color: white;
+    border: none;
+    font-size: 1.8rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: rgba(17, 24, 39, 0.9);
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #ffffff;
+}
 }
